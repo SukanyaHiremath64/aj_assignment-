@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Preference Saver</title>
+    <style>
+        /* Base Styles */
+        * { box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        
+        body {
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Card Design */
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        h1 { color: #2d3436; margin-bottom: 10px; font-size: 1.8rem; }
+        p { color: #636e72; margin-bottom: 30px; font-size: 0.95rem; line-height: 1.5; }
+
+        /* Form Elements */
+        label { display: block; text-align: left; margin-bottom: 8px; font-weight: 600; color: #2d3436; }
+        
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #dfe6e9;
+            border-radius: 10px;
+            font-size: 1rem;
+            margin-bottom: 25px;
+            appearance: none;
+            background: #f9f9f9;
+            cursor: pointer;
+        }
+
+        select:focus { border-color: #00b894; outline: none; }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #00b894;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover { background-color: #009475; transform: translateY(-2px); }
+
+        .footer { margin-top: 20px; font-size: 0.8rem; color: #b2bec3; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome Back!</h1>
+        <p>Set your language preference once, and we'll remember it for your future visits using Cookies.</p>
+        
+        <form action="LanguageServlet" method="POST">
+            <label for="lang">Choose a Language:</label>
+            <select name="lang" id="lang" required>
+                <option value="" disabled selected>Select from list...</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Telugu">Telugu</option>
+                <option value="Tamil">Tamil</option>
+            </select>
+            
+            <button type="submit">Save My Preference</button>
+        </form>
+
+        <div class="footer">
+            Advanced Java Assignment - Sukanya Hiremath
+        </div>
+    </div>
+
+</body>
+</html>

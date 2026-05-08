@@ -1,0 +1,10 @@
+<web-app>
+    <servlet>
+        <servlet-name>LangServlet</servlet-name>
+        <servlet-class>com.sukanya.LanguageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LangServlet</servlet-name>
+        <url-pattern>/LanguageServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
